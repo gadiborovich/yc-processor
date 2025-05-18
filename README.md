@@ -1,6 +1,6 @@
 # YC Company Scraper and Analyzer
 
-A Python-based tool for scraping, analyzing, and classifying YC companies from the Winter/Spring 2025 batch. The tool automatically categorizes companies into core AI themes and maintains a structured database of company information.
+A Python-based tool for scraping, analyzing, and classifying YC companies from any batch. The tool automatically categorizes companies into core AI themes and maintains a structured database of company information.
 
 ## Features
 
