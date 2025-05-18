@@ -28,8 +28,8 @@ A Python-based tool for scraping, analyzing, and classifying YC companies from t
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/yc-scraper.git
-cd yc-scraper
+git clone https://github.com/gadiborovich/yc-processor.git
+cd yc-processor
 ```
 
 2. Create and activate a virtual environment:
@@ -78,17 +78,31 @@ python src/main.py --sync-notion
 ```
 ├── src/
 │   ├── analyzer/        # AI analysis and classification
+│   │   ├── __init__.py
+│   │   └── llm_analyzer.py
 │   ├── config/         # Configuration management
+│   │   ├── __init__.py
+│   │   ├── config.yaml
+│   │   └── config_manager.py
 │   ├── exporter/       # CSV export functionality
+│   │   ├── __init__.py
+│   │   └── csv_exporter.py
 │   ├── notion/         # Notion integration
+│   │   ├── __init__.py
+│   │   └── notion_sync.py
 │   ├── scraper/        # Web scraping functionality
+│   │   ├── __init__.py
+│   │   ├── company_details.py
+│   │   ├── company_scraper.py
+│   │   └── url_discovery.py
 │   ├── storage/        # Database models and management
+│   │   ├── __init__.py
+│   │   └── models.py
 │   └── main.py         # Main entry point
-├── tests/              # Test files
-├── data/              # Data directory
-│   └── exports/       # CSV exports
-├── requirements.txt    # Python dependencies
-└── README.md          # This file
+├── .gitignore         # Git ignore rules
+├── LICENSE           # MIT License
+├── README.md         # This documentation
+└── requirements.txt  # Python dependencies
 ```
 
 ## Notion Database Setup
@@ -118,4 +132,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Disclaimer
 
-This tool is for educational purposes only. Please respect Y Combinator's terms of service and rate limiting when using this tool. 
+This tool is for educational purposes only. Please respect Y Combinator's terms of service and rate limiting when using this tool.
