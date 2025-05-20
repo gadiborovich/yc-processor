@@ -100,11 +100,21 @@ class ConfigManager:
     def get_classification_prompt(self) -> str:
         """
         Get the LLM classification prompt template.
+        First tries to get from environment variable, then falls back to config.
         
         Returns:
             Prompt template string
         """
-        return self.get('analyzer.classification_prompt', '')
+        # First try to get from environment variable
+        env_prompt = os.environ.get("CLASSIFIER_PROMPT")
+        if env_prompt:
+            print("Found CLASSIFIER_PROMPT in environment variables")
+            return env_prompt
+            
+        # Fall back to config file
+        config_prompt = self.get('analyzer.classification_prompt', '')
+        print("Using prompt from config file")
+        return config_prompt
     
     def get_csv_columns(self) -> List[str]:
         """

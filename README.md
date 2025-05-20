@@ -48,6 +48,7 @@ pip install -r requirements.txt
 NOTION_API_KEY=your_notion_api_key
 NOTION_DATABASE_ID=your_notion_database_id
 OPENAI_API_KEY=your_openai_api_key
+CLASSIFIER_PROMPT=your_classifier_prompt
 ```
 
 ## Usage
